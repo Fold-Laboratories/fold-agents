@@ -3,7 +3,7 @@
   "name": "com.foldlaboratories/art",
   "title": "Fold Laboratories Art Catalogue",
   "description": "Original art from galleries and artists: semantic search, provenance, live availability.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "websiteUrl": "https://foldlaboratories.com",
   "repository": {
     "url": "https://github.com/Fold-Laboratories/fold-agents",
@@ -16,7 +16,7 @@
       "headers": [
         {
           "name": "Authorization",
-          "description": "Optional. Without it you are served as an unidentified agent: search, full artwork detail and availability all work, with a watermarked, downscaled preview of each work's primary image and a per-minute rate limit. Tokens go to a named agent operator: send 'Bearer <token>' for every image at full size and no per-minute limit. Request one at https://foldlaboratories.com/agents.",
+          "description": "Optional. Without it you are served as an unidentified agent: search, full artwork detail and availability all work, with clean display copies of a work's images where its seller's agreement provides for them, otherwise a watermarked, downscaled preview of each work's primary image, and a per-minute rate limit. Tokens go to a named agent operator: send 'Bearer <token>' for every image at full size and no per-minute limit. Request one at https://foldlaboratories.com/agents.",
           "isRequired": false,
           "isSecret": true
         }
