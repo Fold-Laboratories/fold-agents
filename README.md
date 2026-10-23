@@ -1,6 +1,6 @@
 # Fold Laboratories Art Catalogue
 
-Original art from galleries and artists: semantic search, provenance, live availability.
+Original art from galleries and artists: search, details, delivered prices and checkout links.
 
 - For agents and the people who build them: https://foldlaboratories.com/agents
 - For language models: https://foldlaboratories.com/llms.txt
