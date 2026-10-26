@@ -1,0 +1,20 @@
+{
+  "name": "fold-laboratories",
+  "displayName": "Fold Laboratories",
+  "version": "1.1.0",
+  "description": "Find and buy original art from independent artists and galleries in the United States: shortlists for a room, gifts narrowed by price and delivery time, works compared side by side, delivered-price estimates, and a link to buy on Fold's own checkout page.",
+  "author": {
+    "name": "Fold Laboratories, LLC",
+    "email": "studioassistant@foldlaboratories.com",
+    "url": "https://foldlaboratories.com"
+  },
+  "homepage": "https://foldlaboratories.com/agents",
+  "repository": "https://github.com/Fold-Laboratories/fold-agents",
+  "license": "Apache-2.0",
+  "keywords": ["art", "original art", "paintings", "prints", "artists", "galleries"],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://foldlaboratories.com/agents",
+  "supportUrl": "https://foldlaboratories.com/contact",
+  "privacyPolicyUrl": "https://studio.foldlaboratories.com/privacy",
+  "termsOfServiceUrl": "https://studio.foldlaboratories.com/terms"
+}

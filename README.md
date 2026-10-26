@@ -8,4 +8,6 @@ Original art from galleries and artists: search, details, delivered prices and c
 
 `server.json` is Fold's entry in the official MCP Registry, `com.foldlaboratories/art`. It is copied here unchanged from Fold's source each time the entry is published, and is never edited in this repository.
 
-All rights reserved.
+`claude-plugin/` is Fold Laboratories' plugin for Claude: Fold's MCP server and four skills for finding and buying original art. It is copied here unchanged from Fold's source, and is the folder Fold submits to Anthropic’s plugin directory.
+
+All rights reserved, except the files in `claude-plugin/`, which are licensed under the Apache License, Version 2.0 (its `LICENSE`).
