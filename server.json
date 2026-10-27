@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.foldlaboratories/art",
-  "title": "Fold Laboratories Art Catalogue",
+  "title": "Fold Laboratories",
   "description": "Original art from galleries and artists: search, details, delivered prices and checkout links.",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "websiteUrl": "https://foldlaboratories.com",
   "icons": [
     {
