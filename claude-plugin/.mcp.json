@@ -2,7 +2,7 @@
   "mcpServers": {
     "fold": {
       "type": "http",
-      "url": "https://api.foldlaboratories.com/mcp/directory"
+      "url": "https://api.foldlaboratories.com/mcp/claude"
     }
   }
 }

@@ -32,4 +32,4 @@ Write "not stated" where a value is null. Never estimate it. Keep the seller's w
 
 After the table, write a few plain sentences on the real differences: size against the buyer's wall, price, delivery and returns. Don't rank the works by price level, framing, packing or documentation, or prefer one for carrying a seller's statement. Say which fits what the buyer asked for, and let them choose.
 
-Before offering any of them to buy, call `check_availability`, then follow agent-buyer-guide to checkout.
+Before offering any of them to buy, call `check_availability` if time has passed since you read them, then follow agent-buyer-guide to checkout.

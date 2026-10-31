@@ -3,7 +3,7 @@
   "name": "com.foldlaboratories/art",
   "title": "Fold Laboratories",
   "description": "Original art from galleries and artists: search, details, delivered prices and checkout links.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "websiteUrl": "https://foldlaboratories.com",
   "icons": [
     {
@@ -19,7 +19,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://api.foldlaboratories.com/mcp",
+      "url": "https://api.foldlaboratories.com/mcp?surface=registry",
       "headers": [
         {
           "name": "Authorization",

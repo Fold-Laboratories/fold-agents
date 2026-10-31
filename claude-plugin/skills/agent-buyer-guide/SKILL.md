@@ -12,34 +12,37 @@ Fold Laboratories sells original paintings, prints, photographs and sculpture fr
 | The buyer wants | Call |
 | --- | --- |
 | To find art by subject, style, colour, size or budget | `search_artworks` (their words in `query`, filters for anything exact) |
-| Art for a particular wall | `find_artworks_for_wall` with `wall` |
-| More like a work they saw, or like a photo | `find_similar_artworks` |
+| Art for a particular wall | `search_artworks` with `wall`; its `wall_fit` gives the size range that suits it |
+| More like a work they saw, or like a photo | `search_artworks` with `similar_to` (an `artwork_id`, or a photo) |
 | The full facts about one work | `get_artwork`, before presenting it |
 | The delivered price and when it would arrive | `get_delivered_quote` with a US ZIP code |
-| To buy | `check_availability`, then `start_checkout` |
+| To buy | `start_checkout` with the work's `offer.listing_id`: it checks availability itself |
 | To hear about works listed later | `save_search_alert` |
 | Their order, a return or a problem | `get_order_status`, `open_claim` |
 
 ## Reading a search
 
 - `results` meet everything asked. `near_matches` meet only part and say what they miss: offer one only as a near match, saying what it misses.
+- When few or no works match, `relax_suggestions` say which one change would let more in, and how many: put it to the buyer as a question ("3 more at up to $2,500 — would you go that far?"). If they agree, search again with its `set` as filters, or without what it says to leave out. They are not matches.
 - `applied_filters` lists every constraint used and where it came from. Check it, and correct a misreading with an explicit filter.
 - `completeness`: `exhaustive` means every work on sale was checked. Anything else, say the answer may be partial.
-- Words of mood ("calm") only order the results; other words must appear in a work's own words to match.
+- A word about the work that names no constraint must appear in its own words to match ("lighthouse"). Words of mood ("calm") and of where it will hang ("hallway", "above the sofa") only order the results; words of how it will be used ("to hang", "a gift") are not used. Only "ready to hang" filters. `understood` says how each word was used.
+- Each of the first matches carries `offer`: the impression to buy (`listing_id`), whether it can be bought now, its price, the seller's delivery charge, when it ships and arrives, and the returns that apply. Put the buyer's US ZIP code in `ships_to` and the first three also carry `delivered_estimate`: the total with estimated sales tax.
+- Every answer ends with `next_actions`: the next call, its ids filled in, and what it still needs from the buyer. When the buyer has chosen, make that call rather than looking for another.
 - A null means the seller did not state it. Say "not stated"; never estimate it.
 
 ## Availability
 
-Every work is unique or from a small edition, and an impression can sell at any moment. Call `check_availability` with the `listing_id`s right before offering a specific work, and again before `start_checkout`. Quote each `impression` label exactly as given: an artist's proof (AP) or printer's proof (PP) is not one of the numbered run, and is usually priced differently.
+Every work is unique or from a small edition, and an impression can sell at any moment. A search's `offer` and `get_artwork` say what can be bought as they answer, and `start_checkout` checks again itself, so no call is needed between them. When time has passed since the answer you are relying on (the buyer came back later), call `check_availability` with the `listing_id`s before offering a work again. Quote each `impression` label exactly as given: an artist's proof (AP) or printer's proof (PP) is not one of the numbered run, and is usually priced differently.
 
 ## Before checkout, confirm with the buyer
 
 1. The exact work and impression, and that it is still available.
-2. The delivered total from `get_delivered_quote`: the price, the seller's delivery charge and the estimated sales tax. The exact tax is calculated at checkout. Fold delivers only to the 50 US states and DC.
+2. The delivered total: the work's `delivered_estimate`, or `get_delivered_quote` with a US ZIP code — the price, the seller's delivery charge and the estimated sales tax. The exact tax is calculated at checkout. Fold delivers only to the 50 US states and DC.
 3. When it ships and arrives, where the seller has stated it, and the returns that apply. A work marked final sale cannot be returned for a change of mind.
 4. The privacy, terms, refund and shipping policy links the answer carries. Show them to the buyer before they approve the purchase.
 
-Then call `start_checkout` with one `listing_id` and give the buyer the `checkout_url`. It opens a page on Fold's own site for that one work. The buyer enters the delivery address there, sees the total with tax and the terms, and pays. You never take a payment or a card. Nothing is reserved: the work can still sell to someone else until the buyer presses Pay, and the link works once and lapses at `expires_at`. If the work has sold, the refusal offers up to three similar works on sale.
+Then call `start_checkout` with one `listing_id` and give the buyer the `checkout_url`. It opens a page on Fold's own site for that one work. The buyer needs no account and never signs in, so do not ask them to sign up for anything: on the page they give a name, an e-mail for the order confirmation and the delivery address (`buyer_enters`), see the total with tax and the terms, and pay. You never take a payment or a card. Nothing is reserved: the work can still sell to someone else until the buyer presses Pay, and the link works once and lapses at `expires_at`. If the work has sold, the refusal offers up to three similar works on sale.
 
 ## What Fold does and does not promise
 

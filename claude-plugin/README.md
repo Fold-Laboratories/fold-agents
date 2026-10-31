@@ -13,11 +13,11 @@ Claude never takes a payment. When you choose a work, Claude checks it is still 
 
 ## The connector
 
-The plugin uses Fold's MCP server at `https://api.foldlaboratories.com/mcp/directory`, the same server as Fold's listing in Claude's connector directory. It needs no account or sign-in. In Claude on the web and desktop, search results and a work's details show as a gallery of cards; each card's one button opens the work's page on Fold's site.
+The plugin uses Fold's MCP server at `https://api.foldlaboratories.com/mcp/claude`, the same server as Fold's listing in Claude's connector directory (its first address, `/mcp/directory`, keeps answering). It needs no account or sign-in. In Claude on the web and desktop, search results and a work's details show as a gallery of cards; each card's one button opens the work's page on Fold's site.
 
 ## What the plugin runs and sends
 
-The plugin runs nothing on your computer: no hooks, commands, scripts or local servers. It adds the four skills above, which are instructions to Claude, and one remote MCP server, Fold's, at `https://api.foldlaboratories.com/mcp/directory`. Everything Claude sends goes to that server:
+The plugin runs nothing on your computer: no hooks, commands, scripts or local servers. It adds the four skills above, which are instructions to Claude, and one remote MCP server, Fold's, at `https://api.foldlaboratories.com/mcp/claude`. Everything Claude sends goes to that server:
 
 - **Searching and reading works**: the words and filters of a search, the ids of works and listings, and a wall's measurements.
 - **Delivered prices**: a US ZIP code. Never a street address.

@@ -32,6 +32,6 @@ For up to five candidates, call `get_artwork`, then `get_delivered_quote` with t
 
 ## 4. Offer and buy
 
-Offer two to four works, each with why it suits the recipient, the delivered total, the arrival window (or that it is unknown) and the returns. When the buyer chooses, follow agent-buyer-guide: `check_availability`, then `start_checkout`. The buyer enters the recipient's address and pays on Fold's page.
+Offer two to four works, each with why it suits the recipient, the delivered total, the arrival window (or that it is unknown) and the returns. When the buyer chooses, follow agent-buyer-guide: `start_checkout` with the work's `offer.listing_id`, which checks availability itself. If time has passed since you found it, `check_availability` first. The buyer enters the recipient's address and pays on Fold's page.
 
 Don't promise gift wrapping, a gift note or a gift receipt. Fold's tools offer none of these.
