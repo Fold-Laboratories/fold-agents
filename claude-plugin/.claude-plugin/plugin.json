@@ -15,6 +15,6 @@
   "icon": "./assets/logo.png",
   "documentationUrl": "https://foldlaboratories.com/agents",
   "supportUrl": "https://foldlaboratories.com/contact",
-  "privacyPolicyUrl": "https://studio.foldlaboratories.com/privacy",
-  "termsOfServiceUrl": "https://studio.foldlaboratories.com/terms"
+  "privacyPolicyUrl": "https://foldlaboratories.com/legal/privacy",
+  "termsOfServiceUrl": "https://foldlaboratories.com/legal/terms"
 }

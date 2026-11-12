@@ -13,7 +13,7 @@ Claude never takes a payment. When you choose a work, Claude checks it is still 
 
 ## The connector
 
-The plugin uses Fold's MCP server at `https://api.foldlaboratories.com/mcp/claude`, the same server as Fold's listing in Claude's connector directory (its first address, `/mcp/directory`, keeps answering). It needs no account or sign-in. In Claude on the web and desktop, search results and a work's details show as a gallery of cards; each card's one button opens the work's page on Fold's site.
+The plugin uses Fold's MCP server at `https://api.foldlaboratories.com/mcp/claude`, the same server as Fold's listing in Claude's connector directory (its first address, `/mcp/directory`, keeps answering). It needs no account or sign-in. In Claude on the web and desktop, search results and a work's details show as a gallery of cards: tap a card to ask Claude about the work; its one button, Buy, opens Fold's checkout page for it; and See on your wall draws a work at true scale on your wall, or over a photo of your room. A delivered price or a checkout link shows as a short panel whose button opens the same page. You pay on Fold's page, never in the chat.
 
 ## What the plugin runs and sends
 
@@ -21,6 +21,7 @@ The plugin runs nothing on your computer: no hooks, commands, scripts or local s
 
 - **Searching and reading works**: the words and filters of a search, the ids of works and listings, and a wall's measurements.
 - **Delivered prices**: a US ZIP code. Never a street address.
+- **A photo of your room** in See on your wall: nothing. The photo stays in your browser; the gallery can connect nowhere.
 - **Works that look alike**: a work's id, or a photo you give, as its web address or the image itself. Fold's server fetches the photo once, sends it to Voyage AI to compare it with works' images, and keeps neither the photo nor its address.
 - **Alerts for new works**: the e-mail address you give, or a web address of yours that Fold's server will call, and the saved search. Fold keeps them until the alert ends.
 - **Orders and returns**: an order's reference and the e-mail address used at checkout, or the token from its order page, and what you say about a return or claim.
@@ -29,8 +30,8 @@ Images in answers and the gallery come from `https://foldlaboratories.com`, and 
 
 ## Privacy and support
 
-- Privacy policy: https://studio.foldlaboratories.com/privacy
-- Terms: https://studio.foldlaboratories.com/terms
+- Privacy policy: https://foldlaboratories.com/legal/privacy
+- Terms: https://foldlaboratories.com/legal/terms
 - For agents: https://foldlaboratories.com/agents
 - Support: https://foldlaboratories.com/contact
 
