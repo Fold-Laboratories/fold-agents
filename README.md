@@ -11,4 +11,6 @@ Original art from galleries and artists: search, details, delivered prices and c
 
 `claude-plugin/` is Fold Laboratories' plugin for Claude: Fold's MCP server and four skills for finding and buying original art. It is copied here unchanged from Fold's source, and is the folder Fold submits to Anthropic’s plugin directory.
 
+Its four skills install into Claude Code, Codex, Cursor and other agents that read Agent Skills with `npx skills add Fold-Laboratories/fold-agents`. They use Fold’s MCP server, which that command does not connect: add the endpoint above as well.
+
 All rights reserved, except the files in `claude-plugin/`, which are licensed under the Apache License, Version 2.0 (its `LICENSE`).
